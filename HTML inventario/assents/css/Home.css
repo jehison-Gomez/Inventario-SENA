@@ -193,3 +193,162 @@ hr{
     flex-direction: column;
     align-items: center;
 }
+
+/*contenido de aletas*/
+.contenido{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-left: 4.9rem;
+    margin-top: 7rem;
+    /* position: fixed; */
+    padding: 0 10px;
+}
+
+/*Movimientos Mayores*/
+.movimientos{
+    width: 100%;
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.alerta-1{
+    border: 2px solid firebrick;
+    width: 18rem;
+    height: 9rem;
+    border-radius: 1rem;
+    padding: 10px;
+    display: flex;
+    gap: .1rem;
+}
+.l{
+    display: flex;
+    flex-direction: column;
+    width: 13rem;
+    align-items: start;
+}
+.cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.alerta-1 i{
+    font-size: 2rem;
+    color: green;
+}
+.area-tic{
+    width: 4rem;
+    height: 4rem;
+    background-color: aqua;
+    border-radius: 5rem;
+}
+.alerta-2{
+    border: 2px solid cadetblue;
+    width: 18rem;
+    height: 9rem;
+    border-radius: 1rem;
+    padding: 10px;
+    display: flex;
+}
+.alerta-2 i{
+    font-size: 2rem;
+    color: red;
+}
+.area-pae{
+    width: 4rem;
+    height: 4rem;
+    background-color: green;
+    border-radius: 5rem;
+}
+.alerta-3{
+    border: 2px solid chocolate;
+    width: 18rem;
+    height: 9rem;
+    border-radius: 1rem;
+    padding: 10px;
+    display: flex;
+}
+.alerta-3 i{
+    font-size: 2rem;
+    color: green;
+}
+.area-gast{
+    width: 3rem;
+    height: 3rem;
+    background-color: yellow;
+    border-radius: 5rem;
+}
+
+/*Aletars de proximos vencimientos*/
+.vencimientos{
+    width: 100%;
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+.alert-1{
+    border: 2px solid;
+    width: 30rem;
+    height: 8rem;
+    border-radius: .4rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.alert-2{
+    border: 2px solid;
+    width: 30rem;
+    height: 8rem;
+    border-radius: .4rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/*Movimientos recientes*/
+.recientes{
+    width: 100%;
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.movimi-1{
+    border: 2px solid green;
+    width: 80rem;
+    height: 4rem;
+    border-radius: .3rem;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.movimi-1 i{
+    font-size: 2rem;
+    color: red;
+}
+.movimi-2{
+    border: 2px solid yellow;
+    width: 80rem;
+    height: 4rem;
+    border-radius: .3rem;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.movimi-2 i{
+    font-size: 2rem;
+    color: green;
+}
+.obj{
+    display: flex;
+    flex-direction: column;
+}
