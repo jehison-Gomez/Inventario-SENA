@@ -215,7 +215,8 @@ hr{
 }
 
 .alerta-1{
-    border: 2px solid firebrick;
+    border: 2px solid rgb(153, 147, 147);
+    background-color: rgba(128, 128, 128, 0.452);
     width: 18rem;
     height: 9rem;
     border-radius: 1rem;
@@ -245,7 +246,8 @@ hr{
     border-radius: 5rem;
 }
 .alerta-2{
-    border: 2px solid cadetblue;
+    border: 2px solid rgb(153, 147, 147);
+    background-color: rgba(128, 128, 128, 0.452);
     width: 18rem;
     height: 9rem;
     border-radius: 1rem;
@@ -263,7 +265,8 @@ hr{
     border-radius: 5rem;
 }
 .alerta-3{
-    border: 2px solid chocolate;
+    border: 2px solid rgb(153, 147, 147);
+    background-color: rgba(128, 128, 128, 0.452);
     width: 18rem;
     height: 9rem;
     border-radius: 1rem;
@@ -291,7 +294,8 @@ hr{
     font-size: 1.2rem;
 }
 .alert-1{
-    border: 2px solid;
+    border: 2px solid rgb(153, 147, 147);
+    background-color: rgba(128, 128, 128, 0.452);
     width: 30rem;
     height: 8rem;
     border-radius: .4rem;
@@ -301,7 +305,8 @@ hr{
     gap: 2rem;
 }
 .alert-2{
-    border: 2px solid;
+    border: 2px solid rgb(153, 147, 147);
+    background-color: rgba(128, 128, 128, 0.452);
     width: 30rem;
     height: 8rem;
     border-radius: .4rem;
@@ -321,7 +326,8 @@ hr{
     align-items: center;
 }
 .movimi-1{
-    border: 2px solid green;
+    border: 2px solid rgb(153, 147, 147);
+    background-color: rgba(128, 128, 128, 0.452);
     width: 80rem;
     height: 4rem;
     border-radius: .3rem;
@@ -335,7 +341,8 @@ hr{
     color: red;
 }
 .movimi-2{
-    border: 2px solid yellow;
+    border: 2px solid rgb(153, 147, 147);
+    background-color: rgba(128, 128, 128, 0.452);
     width: 80rem;
     height: 4rem;
     border-radius: .3rem;
