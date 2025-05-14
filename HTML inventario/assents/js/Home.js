@@ -31,4 +31,3 @@ menusItemsDropDown.forEach((menuItem) =>{
         })
     });
 });
-console.log('hola');
