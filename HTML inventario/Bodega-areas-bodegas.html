@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assents/css/Bodega-area-bodegas.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href=""><img src="./assents/static/img/user.png" alt=""></a>
+            <div class="info">
+                <p class="nombre">Pepe Perez</p>
+                <p class="rol">Administrador</p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="sidebar" id="sidebar">
+        <div class="header">
+            <div class="menu-btn" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="brand">
+            <img src="./assents/static/img/Sena_Colombia_logo.svg.png" alt="">
+            <span><!--Bodega o nombre del proyecto--></span>
+        </div>
+        </div>
+        
+        <div class="menu-container">
+                <ul class="menu">
+                    <!--modulo de home-->
+                        <li class="menu-item menu-item-static ">
+                            <a href="./Home.html" class="menu-link">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Home</span> 
+                            </a>
+                        </li>
+                        <!--modulo de bodega-->
+                        <li class="menu-item menu-item-dropdown active">
+                                <a href="#" class="menu-link">
+                                <i class="fa-solid fa-box-archive"></i>
+                                <span>Bodega</span> 
+                                </a>
+                                <!--sub-modulos de bodega-->
+                            <ul class="sub-menu">
+                                <li ><a href="./Bodega-areas-bodegas.html" class="sub-menu-link">Gestion de areas y bodegas</a></li>
+                                <li ><a href="./Bodega-materiales.html" class="sub-menu-link">Gestion de materiales</a></li>
+                            </ul>
+                        </li>
+                        <!--modulo de usuarios-->
+                    <li class="menu-item menu-item-dropdown">
+                                <a href="#" class="menu-link">
+                                <i class="fa-solid fa-user-group"></i>
+                                <span>Usuarios</span> 
+                                </a>
+                                <!--sub-modulos de usuarios-->
+                        <ul class="sub-menu">
+                                <li><a href="" class="sub-menu-link">Gestion de Usuarios</a></li>
+                                <li><a href="" class="sub-menu-link">Permisos y Roles</a></li>
+                        </ul>
+                    </li>
+                    <!--modulo de reportes-->
+                    <li class="menu-item menu-item-static">
+                        <a href="a" class="menu-link">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Reportes</span> 
+                        </a>
+                    </li>
+                    <!--Modulo de prestamos-->
+                    <li class="menu-item menu-item-static ">
+                        <a href="#" class="menu-link">
+                        <i class="fas fa-hand-holding-hand"></i>
+                        <span>Prestamos</span> 
+                        </a>
+                    </li>
+                </ul>
+        </div>
+            <hr>
+       <div class="footer">
+        <ul class="menu">
+            <li class="menu-item menu-item-static">
+                        <a href="a" class="menu-link">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        <span>salir</span> 
+                        </a>
+                    </li>
+        </ul>
+        <ul class="menu">
+            <li class="menu-item menu-item-static">
+                        <a href="a" class="menu-link">
+                        <i class="fa-solid fa-language"></i>
+                        <span>Idioma</span> 
+                        </a>
+                    </li>
+        </ul>
+       </div>
+    </div>
+    <main class="contenido">
+        <div class="search">
+            <input type="search"  placeholder="🔍 Buscar... ">
+        </div>
+        <div class="tabla">
+            <table class="areas">
+            <thead>
+                <tr>
+                    <th>Áreas</th>
+                    <th>Cantidad de Bodegas</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="./PAE.html">PAE</a></td>
+                    <td>5</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-pen"></i></a>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+                <tr class="n">
+                    <td><a href="./TIC.html">TIC</a></td>
+                    <td>5</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-pen"></i></a>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="./Gastronimia.html">Gastronomía</a></td>
+                    <td>5</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-pen"></i></a>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+                <tr class="n">
+                    <td><a href="./Vias.html">Vias</a></td>
+                    <td>5</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-pen"></i></a>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="./Cafe.html">Escuela del cafe</a></td>
+                    <td>5</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-pen"></i></a>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="boton">
+            <button class="crear">
+                <a href=""><span>+ añadir</span></a>
+            </button>
+        </div>
+    </main>
+    <!--Añadir Nueva Área -->
+<div class="modal" id="addModal">
+  <div class="modal-overlay"></div>
+  <div class="modal-content">
+    <button class="modal-close" id="closeModal">
+      <i class="fa-solid fa-times"></i>
+    </button>
+    
+    <div class="modal-header">
+      <h3><i class="fa-solid fa-plus-circle"></i> Añadir Nueva Área</h3>
+    </div>
+    
+    <div class="modal-body">
+      <form id="addAreaForm">
+        <div class="form-group">
+          <label for="areaName"><i class="fa-solid fa-font"></i> Nombre del Área</label>
+          <input type="text" id="areaName" required placeholder="Ej: TIC, Gastronomía">
+        </div>
+        
+      </form>
+    </div>
+    
+    <div class="modal-footer">
+      <button class="btn btn-cancel" id="cancelAdd">
+        <i class="fa-solid fa-ban"></i> Cancelar
+      </button>
+      <button class="btn btn-confirm" id="confirmAdd">
+        <i class="fa-solid fa-floppy-disk"></i> Guardar
+      </button>
+    </div>
+  </div>
+</div>
+    <script src="./assents/js/Home.js"></script>
+    <script src="./assents/js/Añadir.js"></script>
+</body>
+</html>
