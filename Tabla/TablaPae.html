@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tabla de Productos</title>
+  <link rel="stylesheet" href="tabla.css" />
+</head>
+<body>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre de producto</th>
+        <th>Código</th>
+        <th>Características</th>
+        <th>Disponibilidad</th>
+        <th>Área</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Oberol</td>
+        <td>0125my87</td>
+        <td>Color negro</td>
+        <td>Disponible</td>
+        <td>PAE</td>
+        <td>
+          <input type="checkbox" class="solicitar" data-producto="Computador" />
+          <button class="editar-btn" data-producto="Computador">Editar</button>
+          <button class="eliminar-btn" data-producto="Computador">Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+      
+       
+      </tr>
+    </tbody>
+  </table>
+
+  <button id="btnSolicitar">Solicitar productos</button>
+  <button id="btnAgregar">Agregar nuevo elemento </button>
+
+  <script src="./tabala.js"></script>
+</body>
+</html>
