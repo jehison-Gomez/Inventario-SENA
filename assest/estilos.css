@@ -1,137 +1,86 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f3f5;
+  background-color: #f0f2f5;
   margin: 0;
-  padding: 20px;
+  padding: 1rem;
 }
 
-.ContenedorPrincipal {
+.table-container {
   max-width: 1000px;
   margin: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  padding: 1rem;
+  overflow-x: auto;
 }
 
-.Controles {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.Controles input,
-.Controles select {
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  flex: 1;
-}
-
-.TablaUsuarios table {
+table {
   width: 100%;
   border-collapse: collapse;
-  background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.TablaUsuarios th,
-.TablaUsuarios td {
-  padding: 12px;
-  text-align: left;
-}
-
-.TablaUsuarios thead {
-  background-color: #e2e4e8;
-}
-
-.TablaUsuarios tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.TablaUsuarios td .Accion {
-  margin-right: 10px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.Editar { color: #3b82f6; }
-.Activar, .Desactivar { color: #facc15; }
-.Eliminar { color: #ef4444; }
-
-.Activo { color: green; font-weight: bold; }
-.Inactivo { color: red; font-weight: bold; }
-
-#BtnRegistrarUsuario {
-  margin-top: 15px;
-  padding: 10px 20px;
-  border: none;
-  background-color: #3b82f6;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.Modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.FormularioRegistro {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   text-align: center;
 }
 
-.FormularioRegistro input,
-.FormularioRegistro select {
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
-.FormularioRegistro button {
-  padding: 8px;
-  border: none;
-  border-radius: 6px;
+thead th {
+  background-color: #e1e4e8;
+  font-weight: bold;
+}
+
+tr.modulo td {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  text-align: left;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #007bff;
   cursor: pointer;
 }
 
-#BtnGuardarUsuario {
-  background-color: #10b981;
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#guardarCambios {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
   color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-#BtnCancelar {
-  background-color: #ef4444;
-  color: white;
+#guardarCambios:hover {
+  background-color: #79b486;
 }
 
-.oculto {
-  display: none;
+.mensaje-exito {
+  margin-top: 10px;
+  color: 79b486;
+  font-weight: bold;
 }
 
-@media (max-width: 600px) {
-  .Controles {
-    flex-direction: column;
+/* Responsive */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
   }
 
-  .TablaUsuarios table {
-    font-size: 12px;
+  th, td {
+    padding: 6px;
   }
 
-  .TablaUsuarios th, .TablaUsuarios td {
-    padding: 8px;
+  #guardarCambios {
+    width: 100%;
   }
 }

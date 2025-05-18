@@ -1,134 +1,73 @@
-const usuarios = [
-  {
-    nombre: "Juan",
-    apellido: "Pérez",
-    id: "12345678",
-    edad: 35,
-    correo: "juan@correo.com",
-    area: "TIC",
-    rol: "Administrador",
-    estado: "Activo"
-  }
-];
+const permisos = {
+  "Módulo Usuarios": ["Gestión De Usuarios", "Permisos Y Roles"],
+  "Módulo Bodega": ["Gestión De Áreas Y Bodegas", "Gestión De Materiales"],
+  "Módulo Préstamos": ["Gestión De Préstamos", "Historial De Préstamos"],
+  "Módulo Reportes": ["Visualización Y Creación De Reportes"]
+};
 
-const CuerpoTabla = document.getElementById("CuerpoTabla");
-const BuscarInput = document.getElementById("BuscarInput");
-const FiltroRol = document.getElementById("FiltroRol");
-const FiltroEstado = document.getElementById("FiltroEstado");
-const Modal = document.getElementById("ModalFormulario");
-const BtnGuardarUsuario = document.getElementById("BtnGuardarUsuario");
-const BtnCancelar = document.getElementById("BtnCancelar");
-const TituloFormulario = document.getElementById("TituloFormulario");
+const roles = ["Administrador", "Instructor", "Pasante", "Vocero"];
 
-let modoEdicion = false;
-let usuarioEditando = null;
+function crearTabla() {
+  const tbody = document.getElementById("tablaCuerpo");
+  tbody.innerHTML = "";
 
-function renderizarUsuarios() {
-  CuerpoTabla.innerHTML = "";
-  const textoFiltro = BuscarInput.value.toLowerCase();
-  const rol = FiltroRol.value;
-  const estado = FiltroEstado.value;
+  for (const modulo in permisos) {
+    // Fila de título del módulo
+    const filaModulo = document.createElement("tr");
+    filaModulo.classList.add("modulo");
+    const celdaModulo = document.createElement("td");
+    celdaModulo.textContent = modulo;
+    celdaModulo.colSpan = roles.length + 1;
+    filaModulo.appendChild(celdaModulo);
+    tbody.appendChild(filaModulo);
 
-  usuarios
-    .filter(u =>
-      (u.nombre + u.correo).toLowerCase().includes(textoFiltro) &&
-      (!rol || u.rol === rol) &&
-      (!estado || u.estado === estado)
-    )
-    .forEach((usuario, index) => {
+    // Filas de submódulos
+    permisos[modulo].forEach(submodulo => {
       const fila = document.createElement("tr");
-      fila.innerHTML = `
-        <td>${usuario.nombre}</td>
-        <td>${usuario.apellido}</td>
-        <td>${usuario.id}</td>
-        <td>${usuario.edad}</td>
-        <td>${usuario.correo}</td>
-        <td>${usuario.area}</td>
-        <td>${usuario.rol}</td>
-        <td class="${usuario.estado}">${usuario.estado}</td>
-        <td>
-          <span class="Accion Editar" onclick="editarUsuario(${index})">Editar</span>
-          <span class="Accion ${usuario.estado === "Activo" ? "Desactivar" : "Activar"}" onclick="cambiarEstado(${index})">
-            ${usuario.estado === "Activo" ? "Desactivar" : "Activar"}
-          </span>
-          <span class="Accion Eliminar" onclick="eliminarUsuario(${index})">Eliminar</span>
-        </td>
-      `;
-      CuerpoTabla.appendChild(fila);
+      const celdaSubmodulo = document.createElement("td");
+      celdaSubmodulo.textContent = submodulo;
+      fila.appendChild(celdaSubmodulo);
+
+      roles.forEach(rol => {
+        const celda = document.createElement("td");
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.dataset.modulo = submodulo.replace(/\s+/g, '');
+        checkbox.dataset.rol = rol.replace(/\s+/g, '');
+        celda.appendChild(checkbox);
+        fila.appendChild(celda);
+      });
+
+      tbody.appendChild(fila);
     });
-}
-
-document.getElementById("BtnRegistrarUsuario").addEventListener("click", () => {
-  modoEdicion = false;
-  limpiarFormulario();
-  Modal.classList.remove("oculto");
-  TituloFormulario.textContent = "Registrar Usuario";
-});
-
-BtnCancelar.addEventListener("click", () => {
-  Modal.classList.add("oculto");
-});
-
-BtnGuardarUsuario.addEventListener("click", () => {
-  const nuevoUsuario = {
-    nombre: document.getElementById("InputNombre").value,
-    apellido: document.getElementById("InputApellido").value,
-    id: document.getElementById("InputIdentificacion").value,
-    edad: parseInt(document.getElementById("InputEdad").value),
-    correo: document.getElementById("InputCorreo").value,
-    area: document.getElementById("InputArea").value,
-    rol: document.getElementById("InputRol").value,
-    estado: "Activo"
-  };
-
-  if (Object.values(nuevoUsuario).includes("") || isNaN(nuevoUsuario.edad)) {
-    alert("Por favor, complete todos los campos.");
-    return;
-  }
-
-  if (modoEdicion && usuarioEditando !== null) {
-    usuarios[usuarioEditando] = nuevoUsuario;
-  } else {
-    usuarios.push(nuevoUsuario);
-  }
-
-  renderizarUsuarios();
-  Modal.classList.add("oculto");
-});
-
-function editarUsuario(index) {
-  const u = usuarios[index];
-  document.getElementById("InputNombre").value = u.nombre;
-  document.getElementById("InputApellido").value = u.apellido;
-  document.getElementById("InputIdentificacion").value = u.id;
-  document.getElementById("InputEdad").value = u.edad;
-  document.getElementById("InputCorreo").value = u.correo;
-  document.getElementById("InputArea").value = u.area;
-  document.getElementById("InputRol").value = u.rol;
-  modoEdicion = true;
-  usuarioEditando = index;
-  Modal.classList.remove("oculto");
-  TituloFormulario.textContent = "Editar Usuario";
-}
-
-function cambiarEstado(index) {
-  usuarios[index].estado = usuarios[index].estado === "Activo" ? "Inactivo" : "Activo";
-  renderizarUsuarios();
-}
-
-function eliminarUsuario(index) {
-  if (confirm("¿Desea eliminar este usuario?")) {
-    usuarios.splice(index, 1);
-    renderizarUsuarios();
   }
 }
 
-function limpiarFormulario() {
-  document.querySelectorAll(".FormularioRegistro input, .FormularioRegistro select").forEach(e => e.value = "");
+function cargarPermisos() {
+  const savedPermissions = JSON.parse(localStorage.getItem("permisos")) || {};
+  document.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
+    const key = checkbox.dataset.modulo + "_" + checkbox.dataset.rol;
+    checkbox.checked = savedPermissions[key] || false;
+  });
 }
 
-BuscarInput.addEventListener("input", renderizarUsuarios);
-FiltroRol.addEventListener("change", renderizarUsuarios);
-FiltroEstado.addEventListener("change", renderizarUsuarios);
+function guardarPermisos() {
+  const permissions = {};
+  document.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
+    const key = checkbox.dataset.modulo + "_" + checkbox.dataset.rol;
+    permissions[key] = checkbox.checked;
+  });
+  localStorage.setItem("permisos", JSON.stringify(permissions));
 
-renderizarUsuarios();
+  const msg = document.createElement("div");
+  msg.textContent = " Cambios guardados correctamente";
+  msg.className = "mensaje-exito";
+  document.querySelector(".button-container").appendChild(msg);
+  setTimeout(() => msg.remove(), 3000);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  crearTabla();
+  cargarPermisos();
+  document.getElementById("guardarCambios").addEventListener("click", guardarPermisos);
+});

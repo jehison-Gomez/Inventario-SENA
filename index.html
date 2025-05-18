@@ -1,78 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestión de Usuarios</title>
-  <link rel="stylesheet" href="assest/estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Permisos</title>
+  <link rel="stylesheet" href="assest/estilos.css" />
 </head>
 <body>
-  <div class="ContenedorPrincipal">
-    <div class="Controles">
-      <input type="text" id="BuscarInput" placeholder="Buscar por nombre o correo">
-      <select id="FiltroRol">
-        <option value="">Todos los roles</option>
-        <option value="Administrador">Administrador</option>
-        <option value="Instructor">Instructor</option>
-        <option value="Pasante">Pasante</option>
-        <option value="vocero">vocero</option>
-      </select>
-      <select id="FiltroEstado">
-        <option value="">Todos los estados</option>
-        <option value="Activo">Activo</option>
-        <option value="Inactivo">Inactivo</option>
-      </select>
-    </div>
+  <div class="table-container">
+    <table id="tablaPermisos">
+      <thead>
+        <tr>
+          <th>Módulo / Submódulo</th>
+          <th>Administrador</th>
+          <th>Instructor</th>
+          <th>Pasante</th>
+          <th>Vocero</th>
+        </tr>
+      </thead>
+      <tbody id="tablaCuerpo">
+      
+      </tbody>
+    </table>
 
-    <div class="TablaUsuarios">
-      <table>
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Identificación</th>
-            <th>Edad</th>
-            <th>Correo</th>
-            <th>Área</th>
-            <th>Rol</th>
-            <th>Estado</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody id="CuerpoTabla">
-          <!-- Generado por JS -->
-        </tbody>
-      </table>
-    </div>
-
-    <button id="BtnRegistrarUsuario">Registrar Usuario</button>
-
-    <div id="ModalFormulario" class="Modal oculto">
-      <div class="FormularioRegistro">
-        <h2 id="TituloFormulario">Registrar Usuario</h2>
-        <input type="text" id="InputNombre" placeholder="Nombre">
-        <input type="text" id="InputApellido" placeholder="Apellido">
-        <input type="text" id="InputIdentificacion" placeholder="Identificación">
-        <input type="number" id="InputEdad" placeholder="Edad">
-        <input type="email" id="InputCorreo" placeholder="Correo">
-        <select id="InputArea">
-          <option value="">Seleccione un área</option>
-          <option value="TIC">TIC</option>
-          <option value="Bioconstrucción">Bioconstrucción</option>
-          <option value="Turismo">Turismo</option>
-          <option value="Agrícola Pecuaria">Agrícola Pecuaria</option>
-          <option value="Ambiental">Ambiental</option>
-        </select>
-        <select id="InputRol">
-          <option value="">Seleccione un rol</option>
-          <option value="Administrador">Administrador</option>
-          <option value="Instructor">Instructor</option>
-          <option value="Pasante">Pasante</option>
-          <option value="vocero">vocero</option>
-        </select>
-        <button id="BtnGuardarUsuario">Guardar</button>
-        <button id="BtnCancelar">Cancelar</button>
-      </div>
+    <div class="button-container">
+      <button id="guardarCambios">Guardar Cambios</button>
     </div>
   </div>
 
