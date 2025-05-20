@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assents/css/Home.css">
+    <link rel="stylesheet" href="/prestamos/Prestamos.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href=""><img src="./assents/static/img/user.png" alt=""></a>
+            <div class="info">
+                <p class="nombre">Pepe Perez</p>
+                <p class="rol">Administrador</p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="sidebar" id="sidebar">
+        <div class="header">
+            <div class="menu-btn" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="brand">
+            <img src="./assents/static/img/Sena_Colombia_logo.svg.png" alt="">
+            <span><!--Bodega o nombre del proyecto--></span>
+        </div>
+        </div>
+        
+        <div class="menu-container">
+                <ul class="menu">
+                    <!--modulo de home-->
+                        <li class="menu-item menu-item-static">
+                            <a href="../Home.html" class="menu-link">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Home</span> 
+                            </a>
+                        </li>
+                        <!--modulo de bodega-->
+                        <li class="menu-item menu-item-dropdown">
+                                <a href="#" class="menu-link">
+                                <i class="fa-solid fa-box-archive"></i>
+                                <span>Bodega</span> 
+                                </a>
+                                <!--sub-modulos de bodega-->
+                            <ul class="sub-menu">
+                                <li><a href="../Bodega-areas-bodegas.html" class="sub-menu-link">Gestion de areas y bodegas</a></li>
+                                <li><a href="../Bodega-materiales.html" class="sub-menu-link">Gestion de materiales</a></li>
+                            </ul>
+                        </li>
+                        <!--modulo de usuarios-->
+                    <li class="menu-item menu-item-dropdown">
+                                <a href="/usu.html" class="menu-link">
+                                <i class="fa-solid fa-user-group"></i>
+                                <span>Usuarios</span> 
+                                </a>
+                    </li>
+                    <!--modulo de reportes-->
+                    <li class="menu-item menu-item-static ">
+                        <a href="../ReporteTIC.html" class="menu-link">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Reportes</span> 
+                        </a>
+                    </li>
+                    <!--Modulo de prestamos-->
+                    <li class="menu-item menu-item-static active">
+                        <a href="../ReporteTIC.html" class="menu-link">
+                        <i class="fas fa-hand-holding-hand"></i>
+                        <span>Prestamos</span> 
+                        </a>
+                    </li>
+                </ul>
+        </div>
+            <hr>
+       <div class="footer">
+        <ul class="menu">
+            <li class="menu-item menu-item-static">
+                        <a href="../login/login.html" class="menu-link">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        <span>salir</span> 
+                        </a>
+                    </li>
+        </ul>
+        <ul class="menu">
+            <li class="menu-item menu-item-static">
+                        <a href="a" class="menu-link">
+                        <i class="fa-solid fa-language"></i>
+                        <span>Idioma</span> 
+                        </a>
+                    </li>
+        </ul>
+       </div>
+    </div>
+    <main class="contenido">
+      <div class="container">
+    <div class="actions">
+      <button class="add-area">+ Añadir nueva área</button>
+      <button class="delete-area">Eliminar área</button>
+    </div>
+    
+    <div class="areas">
+      <!-- Area TIC -->
+      <a href="/Tabla/tablaTic.html" class="area-link">
+        <div class="area-card">
+          <div class="area-header">Area TIC</div>
+          <div class="area-content">
+            <p>Cantidad de productos: 300</p>
+            <p>Productos fuera del área: 2</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Area PAE -->
+      <a href="/Tabla/TablaPae.html" class="area-link">
+        <div class="area-card">
+          <div class="area-header">Area PAE</div>
+          <div class="area-content">
+            <p>Cantidad de productos: 120</p>
+            <p>Productos fuera del área: 0</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Area Gastronomía -->
+      <a href="/Tabla/Tablagastronomia.html" class="area-link">
+        <div class="area-card">
+          <div class="area-header">Area Gastronomía</div>
+          <div class="area-content">
+            <p>Cantidad de productos: 120</p>
+            <p>Productos fuera del área: 0</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Area del Café -->
+      <a href="/Tabla/Tablacafe.html" class="area-link">
+        <div class="area-card">
+          <div class="area-header">Area del Café</div>
+          <div class="area-content">
+            <p>Cantidad de productos: 200</p>
+            <p>Productos fuera del área: 0</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <script src="./Prestamos.js"></script>
+    </main>
+    <script src="../assents/js/Home.js"></script>
+</body>
+</html>

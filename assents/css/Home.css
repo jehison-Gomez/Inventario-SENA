@@ -1,0 +1,361 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/*Body*/
+body{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+/*sidebar*/
+.sidebar{
+    border: 1px solid black;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 15rem;
+    height: 100%;
+    padding: 1.4rem 1rem 0 1rem;/*primer valor por arriba y segundo valor por abajo*/
+    background-color: white;
+    transition: width 0.5s ease;
+}
+.sidebar.minimize{
+    width: 4.94rem;
+}
+
+/*Header*/
+.header{
+    width: 100%;
+}
+
+/*navbar*/
+.navbar{
+    width: 100%;
+    height: 7rem;
+    border: 2px solid;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: fixed;
+}
+.navbar img{
+    width: 5rem;
+    border-radius: 5rem;
+}
+a:hover img{
+    background-color: rgb(92, 92, 243, 0.138);
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+}
+.info .rol{
+    color: gray;
+}
+/*menu boton*/
+.menu-btn{
+    border: 1px solid black;
+    position: absolute;
+    top: 3.5%;
+    right: -0.87rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background-color: white;
+    color: gray;
+    cursor: pointer;
+    transition: right 0.3s ease;
+}
+.menu-btn i{
+    font-size: 1.5rem;
+}
+
+/*brand*/
+.brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding-left: 0.455rem;
+    margin-bottom: 1.8rem;
+    overflow: hidden;/*ocultar elemntos que sobre salgan cuando el sidebar este minimisado*/
+}
+.brand img{
+    width: 2rem;
+}
+.brand span{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: black;
+}
+
+/*menu container*/
+.menu-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*menu*/
+.menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.menu .menu-item{
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+}
+.menu .menu-link{
+    display: flex;
+    padding: 0.55rem 0;
+    color: black;
+    text-decoration: none;
+}
+.menu-item:hover .menu-link, 
+.sub-menu .sub-menu-link:hover, 
+.menu-item.active .menu-link{
+    background-color: rgb(92, 92, 243, 0.138);
+}
+.menu-link i{
+    font-size: 1.35rem;
+    padding: 0 0.8rem;
+}
+.menu-link span{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+/*parte del codigo que no me funciono 😢*/
+/* .sidebar.minimize .menu-item:hover,
+.sidebar.minimize .menu-item.sub-menu-toggle span{
+    overflow: visible;
+} */
+/* .sidebar.minimize .menu-item:hover span,
+.sidebar.minimize .menu-item.sub-menu-toggle span{
+    position: absolute;
+    left: 4.2rem;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+} */
+
+/*sub-menu*/
+.sub-menu{
+    height: 0;
+    transition: all 0.5s ease;
+}
+.sidebar.minimize .sub-menu{
+    position: absolute;
+    left: 4.2rem;
+}
+/* .sidebar.minimize .menu-item.sub-menu-toggle .sub-menu{
+    margin-top: 0.5rem;
+} */
+.sub-menu .sub-menu-link{
+    display: flex;
+    margin-left: 2.5rem;
+    padding: 0.55rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+}
+
+/*hr*/
+
+hr{
+    
+    width: 100%;
+    height: .1rem;
+    color: black;
+}
+
+/*footer*/
+
+.footer{
+    display: flex;
+    width: 117%;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*contenido de aletas*/
+.contenido{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-left: 4.9rem;
+    margin-top: 7rem;
+    /* position: fixed; */
+    padding: 0 10px;
+}
+
+/*Movimientos Mayores*/
+.movimientos{
+    width: 100%;
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.alerta-1{
+    border: 2px solid rgb(153, 147, 147);
+    background-color: rgba(128, 128, 128, 0.452);
+    width: 18rem;
+    height: 9rem;
+    border-radius: 1rem;
+    padding: 10px;
+    display: flex;
+    gap: .1rem;
+}
+.l{
+    display: flex;
+    flex-direction: column;
+    width: 13rem;
+    align-items: start;
+}
+.cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.alerta-1 i{
+    font-size: 2rem;
+    color: green;
+}
+.area-tic{
+    width: 4rem;
+    height: 4rem;
+    background-color: aqua;
+    border-radius: 5rem;
+}
+.alerta-2{
+    border: 2px solid rgb(153, 147, 147);
+    background-color: rgba(128, 128, 128, 0.452);
+    width: 18rem;
+    height: 9rem;
+    border-radius: 1rem;
+    padding: 10px;
+    display: flex;
+}
+.alerta-2 i{
+    font-size: 2rem;
+    color: red;
+}
+.area-pae{
+    width: 4rem;
+    height: 4rem;
+    background-color: green;
+    border-radius: 5rem;
+}
+.alerta-3{
+    border: 2px solid rgb(153, 147, 147);
+    background-color: rgba(128, 128, 128, 0.452);
+    width: 18rem;
+    height: 9rem;
+    border-radius: 1rem;
+    padding: 10px;
+    display: flex;
+}
+.alerta-3 i{
+    font-size: 2rem;
+    color: green;
+}
+.area-gast{
+    width: 3rem;
+    height: 3rem;
+    background-color: yellow;
+    border-radius: 5rem;
+}
+
+/*Aletars de proximos vencimientos*/
+.vencimientos{
+    width: 100%;
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+.alert-1{
+    border: 2px solid rgb(153, 147, 147);
+    background-color: rgba(128, 128, 128, 0.452);
+    width: 30rem;
+    height: 8rem;
+    border-radius: .4rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.alert-2{
+    border: 2px solid rgb(153, 147, 147);
+    background-color: rgba(128, 128, 128, 0.452);
+    width: 30rem;
+    height: 8rem;
+    border-radius: .4rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/*Movimientos recientes*/
+.recientes{
+    width: 100%;
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.movimi-1{
+    border: 2px solid rgb(153, 147, 147);
+    background-color: rgba(128, 128, 128, 0.452);
+    width: 80rem;
+    height: 4rem;
+    border-radius: .3rem;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.movimi-1 i{
+    font-size: 2rem;
+    color: red;
+}
+.movimi-2{
+    border: 2px solid rgb(153, 147, 147);
+    background-color: rgba(128, 128, 128, 0.452);
+    width: 80rem;
+    height: 4rem;
+    border-radius: .3rem;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.movimi-2 i{
+    font-size: 2rem;
+    color: green;
+}
+.obj{
+    display: flex;
+    flex-direction: column;
+}

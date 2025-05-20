@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/Yamboro.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px); /* Menor desenfoque para hacer la imagen más clara */
+    z-index: -1;
+}
+
+.form-login {
+    width: 500px;
+    height: 450px;
+    background: rgba(0, 128, 0, 0.7); /* Verde con 70% de opacidad */
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    padding: 30px 30px;
+    color: black;
+    border-radius: 20px; /* Bordes redondeados */
+}
+
+.form-login h1 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+    color: #fff; /* Texto blanco */
+}
+
+.Controls {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: rgb(0, 54, 5);
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    border-radius: 20px;
+    transition: border 0.3s ease; /* Transición suave en el borde */
+}
+
+.Controls:focus {
+    outline: none;
+    border: 2px solid #f0e68c; /* Resalta el borde cuando está enfocado */
+}
+
+.Buttons {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: wheat;
+    color: black;
+    border-radius: 90px;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.Buttons:hover {
+    background: #f0e68c; /* Un color más suave o dorado */
+    transform: scale(1.05); /* Efecto de escala al hacer hover */
+}
+
+.form-login p {
+    height: 40px;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.img {
+    height: 50px;
+    width: 70px;
+}
