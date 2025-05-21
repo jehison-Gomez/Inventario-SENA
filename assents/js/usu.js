@@ -5,7 +5,7 @@ const permisos = {
   "Módulo Reportes": ["Visualización Y Creación De Reportes"]
 };
 
-const roles = ["Administrador", "Instructor", "Pasante", "Vocero"];
+const roles = ["Administrador", "Instructor", "Pasante", "Vocero", "Diego"];
 
 function crearTabla() {
   const tbody = document.getElementById("tablaCuerpo");
