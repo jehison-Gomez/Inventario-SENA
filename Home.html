@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assents/css/Home.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href=""><img src="./assents/static/img/user.png" alt=""></a>
+            <div class="info">
+                <p class="nombre">Pepe Perez</p>
+                <p class="rol">Administrador</p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="sidebar" id="sidebar">
+        <div class="header">
+            <div class="menu-btn" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="brand">
+            <img src="./assents/static/img/Sena_Colombia_logo.svg.png" alt="">
+            <span><!--Bodega o nombre del proyecto--></span>
+        </div>
+        </div>
+        
+        <div class="menu-container">
+                <ul class="menu">
+                    <!--modulo de home-->
+                        <li class="menu-item menu-item-static active">
+                            <a href="#" class="menu-link">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Home</span> 
+                            </a>
+                        </li>
+                        <!--modulo de bodega-->
+                        <li class="menu-item menu-item-dropdown">
+                                <a href="#" class="menu-link">
+                                <i class="fa-solid fa-box-archive"></i>
+                                <span>Bodega</span> 
+                                </a>
+                                <!--sub-modulos de bodega-->
+                            <ul class="sub-menu">
+                                <li><a href="./Bodega-areas-bodegas.html" class="sub-menu-link">Gestion de areas y bodegas</a></li>
+                                <li><a href="./Bodega-materiales.html" class="sub-menu-link">Gestion de materiales</a></li>
+                            </ul>
+                        </li>
+                        <!--modulo de usuarios-->
+                    <li class="menu-item menu-item-dropdown">
+                                <a href="/usu.html" class="menu-link">
+                                <i class="fa-solid fa-user-group"></i>
+                                <span>Usuarios</span> 
+                                </a>
+                    </li>
+                    <!--modulo de reportes-->
+                    <li class="menu-item menu-item-static ">
+                        <a href="./ReporteTIC.html" class="menu-link">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Reportes</span> 
+                        </a>
+                    </li>
+                    <!--Modulo de prestamos-->
+                    <li class="menu-item menu-item-static ">
+                        <a href="/prestamos/Prestamos.html" class="menu-link">
+                        <i class="fas fa-hand-holding-hand"></i>
+                        <span>Prestamos</span> 
+                        </a>
+                    </li>
+                </ul>
+        </div>
+            <hr>
+       <div class="footer">
+        <ul class="menu">
+            <li class="menu-item menu-item-static">
+                        <a href="./login/login.html" class="menu-link">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        <span>salir</span> 
+                        </a>
+                    </li>
+        </ul>
+       </div>
+    </div>
+    <main class="contenido">
+        <!--Alertas de Mayores Movimientos-->
+        <h3>Mayores Movimientos</h3>
+        <div class="movimientos">
+            <div class="alerta-1">
+                <div class="l"><span>Area TIC</span>
+                    <i class="fa-solid fa-down-long"></i>
+                    <div class="area-tic"></div>
+                </div>
+                <div class="cont">
+                    <span>Entrada de 150 Computadoras</span>
+                </div>
+            </div>
+            <div class="alerta-2">
+                <div class="l"><span>Area PAE</span> 
+                        <i class="fa-solid fa-up-long"></i>
+                    <div class="area-pae"></div>
+                </div>
+                <div class="cont">
+                    <span>Salida de 100 Kg de Fertilizante</span>    
+                </div>
+            </div>
+            <div class="alerta-3">
+                <div class="l"><span>Area Gastronomia</span> 
+                    <i class="fa-solid fa-down-long"></i>
+                    <div class="area-gast"></div>
+                </div>
+                <div class="cont">
+                    <span>Entrada de 100 Cuchillos Fileteadores</span>    
+                </div>
+            </div>
+        </div>
+        <!--Alertas de Vencimiento-->
+        <h3>Alertas de Vencimientos</h3>
+        <div class="vencimientos"> 
+            <div class="alert-1">
+                <span>Próximo a vencer en 1 Mes</span>
+                <span>10 Unidades de Atún Enlatado</span>
+            </div>
+            <div class="alert-2">
+                <span>Próximo a vencer 1 Mes</span>
+                <span>30 Unidades de Fertilizante</span>
+            </div>
+        </div>
+        <!--Alertas de Ultimos Movimientos-->
+        <h3>Ultimos Movimientos</h3>
+        <div class="recientes">
+            <div class="movimi-1">
+                <i class="fa-solid fa-up-long"></i>
+                <div class="obj">
+                    <span>Fertilizante 15-16</span>
+                    <span class="per">Instructor Juan Artunduaga</span>
+                </div>
+            </div>
+            <div class="movimi-2">
+                <i class="fa-solid fa-down-long"></i>
+                <div class="obj">
+                    <span>Guantes de Jardineria</span>
+                    <span class="per">Area PAE</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./assents/js/Home.js"></script>
+</body>
+</html>

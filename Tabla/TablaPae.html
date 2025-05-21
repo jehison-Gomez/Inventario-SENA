@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Tabla de Productos</title>
+  <link rel="stylesheet" href="tabla.css" />
+  <link rel="stylesheet" href="/assents/css/Home.css">
+</head>
+<body>
+<header>
+        <div class="navbar">
+            <a href=""><img src="/assents/static/img/user.png" alt=""></a>
+            <div class="info">
+                <p class="nombre">Pepe Perez</p>
+                <p class="rol">Administrador</p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="sidebar" id="sidebar">
+        <div class="header">
+            <div class="menu-btn" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="brand">
+            <img src="/assents/static/img/Sena_Colombia_logo.svg.png" alt="">
+            <span><!--Bodega o nombre del proyecto--></span>
+        </div>
+        </div>
+        
+        <div class="menu-container">
+                <ul class="menu">
+                    <!--modulo de home-->
+                        <li class="menu-item menu-item-static active">
+                            <a href="/Home.html" class="menu-link">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Home</span> 
+                            </a>
+                        </li>
+                        <!--modulo de bodega-->
+                        <li class="menu-item menu-item-dropdown">
+                                <a href="#" class="menu-link">
+                                <i class="fa-solid fa-box-archive"></i>
+                                <span>Bodega</span> 
+                                </a>
+                                <!--sub-modulos de bodega-->
+                            <ul class="sub-menu">
+                                <li><a href="/Bodega-areas-bodegas.html" class="sub-menu-link">Gestion de areas y bodegas</a></li>
+                                <li><a href="/Bodega-materiales.html" class="sub-menu-link">Gestion de materiales</a></li>
+                            </ul>
+                        </li>
+                        <!--modulo de usuarios-->
+                    <li class="menu-item menu-item-dropdown">
+                                <a href="/usu.html" class="menu-link">
+                                <i class="fa-solid fa-user-group"></i>
+                                <span>Usuarios</span> 
+                                </a>
+                    </li>
+                    <!--modulo de reportes-->
+                    <li class="menu-item menu-item-static ">
+                        <a href="/ReporteTIC.html" class="menu-link">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Reportes</span> 
+                        </a>
+                    </li>
+                    <!--Modulo de prestamos-->
+                    <li class="menu-item menu-item-static ">
+                        <a href="/prestamos/Prestamos.html" class="menu-link">
+                        <i class="fas fa-hand-holding-hand"></i>
+                        <span>Prestamos</span> 
+                        </a>
+                    </li>
+                </ul>
+        </div>
+            <hr>
+       <div class="footer">
+        <ul class="menu">
+            <li class="menu-item menu-item-static">
+                        <a href="/login/login.html" class="menu-link">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        <span>salir</span> 
+                        </a>
+                    </li>
+        </ul>
+       </div>
+    </div>
+    <main class="contenido">
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre de producto</th>
+        <th>Código</th>
+        <th>Características</th>
+        <th>Disponibilidad</th>
+        <th>Área</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Oberol</td>
+        <td>0125my87</td>
+        <td>Color negro</td>
+        <td>Disponible</td>
+        <td>PAE</td>
+        <td>
+          <input type="checkbox" class="solicitar" data-producto="Computador" />
+          <button class="editar-btn" data-producto="Computador">Editar</button>
+          <button class="eliminar-btn" data-producto="Computador">Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+      
+       
+      </tr>
+    </tbody>
+  </table>
+
+  <button id="btnSolicitar">Solicitar productos</button>
+  <button id="btnAgregar">Agregar nuevo elemento </button>
+    </main>
+  <script src="./tabala.js"></script>
+  <script src="/assents/js/Home.js"></script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/*Body*/
+body{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+/*sidebar*/
+.sidebar{
+    border: 1px solid black;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 15rem;
+    height: 100%;
+    padding: 1.4rem 1rem 0 1rem;/*primer valor por arriba y segundo valor por abajo*/
+    background-color: white;
+    transition: width 0.5s ease;
+}
+.sidebar.minimize{
+    width: 4.94rem;
+}
+
+/*Header*/
+.header{
+    width: 100%;
+}
+
+/*navbar*/
+.navbar{
+    width: 100%;
+    height: 7rem;
+    border: 2px solid;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: fixed;
+}
+.navbar img{
+    width: 5rem;
+    border-radius: 5rem;
+}
+a:hover img{
+    background-color: rgb(92, 92, 243, 0.138);
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+}
+.info .rol{
+    color: gray;
+}
+/*menu boton*/
+.menu-btn{
+    border: 1px solid black;
+    position: absolute;
+    top: 3.5%;
+    right: -0.87rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background-color: white;
+    color: gray;
+    cursor: pointer;
+    transition: right 0.3s ease;
+}
+.menu-btn i{
+    font-size: 1.5rem;
+}
+
+/*brand*/
+.brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding-left: 0.455rem;
+    margin-bottom: 1.8rem;
+    overflow: hidden;/*ocultar elemntos que sobre salgan cuando el sidebar este minimisado*/
+}
+.brand img{
+    width: 2rem;
+}
+.brand span{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: black;
+}
+
+/*menu container*/
+.menu-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*menu*/
+.menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.menu .menu-item{
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+}
+.menu .menu-link{
+    display: flex;
+    padding: 0.55rem 0;
+    color: black;
+    text-decoration: none;
+}
+.menu-item:hover .menu-link, 
+.sub-menu .sub-menu-link:hover, 
+.menu-item.active .menu-link{
+    background-color: rgb(92, 92, 243, 0.138);
+}
+.menu-link i{
+    font-size: 1.35rem;
+    padding: 0 0.8rem;
+}
+.menu-link span{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/*sub-menu*/
+.sub-menu{
+    height: 0;
+    transition: all 0.5s ease;
+}
+.sidebar.minimize .sub-menu{
+    position: absolute;
+    left: 4.2rem;
+}
+.sub-menu .sub-menu-link{
+    display: flex;
+    margin-left: 2.5rem;
+    padding: 0.55rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+}
+
+/*hr*/
+
+hr{
+    
+    width: 100%;
+    height: .1rem;
+    color: black;
+}
+
+/*footer*/
+
+.footer{
+    display: flex;
+    width: 117%;
+    flex-direction: column;
+    align-items: center;
+}
+.contenido{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-left: 4.9rem;
+    margin-top: 7rem;
+    /* position: fixed; */
+    padding: 0 10px;
+    display: flex;
+}
+/*tabla*/
+.btn-add {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 10rem;
+    margin-left: 75rem;
+}
+
+.btn-add:hover {
+    background-color: #45a049;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #0b7dda;
+}
+
+/* Estilos para la tabla de bodegas */
+.tabla {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.bodegas {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bodegas th, .bodegas td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.bodegas th {
+    background-color: #2c3e50;
+    font-weight: bold;
+}
+
+.bodegas tr.n {
+    background-color: #f9f9f9;
+}
+
+.bodegas tr:hover {
+    background-color: #f1f1f1;
+}
+
+.bodegas a {
+    color: #2196F3;
+    text-decoration: none;
+}
+
+.bodegas a:hover {
+    text-decoration: underline;
+}
+
+.bodegas .fa-pen, .bodegas .fa-trash {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.bodegas .fa-pen {
+    color: rgb(62, 219, 219);
+}
+
+.bodegas .fa-trash {
+    color: rgb(62, 219, 219);
+}

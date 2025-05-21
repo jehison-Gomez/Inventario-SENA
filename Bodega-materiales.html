@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assents/css/Bodega-materiales.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href=""><img src="./assents/static/img/user.png" alt=""></a>
+            <div class="info">
+                <p class="nombre">Pepe Perez</p>
+                <p class="rol">Administrador</p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="sidebar" id="sidebar">
+        <div class="header">
+            <div class="menu-btn" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="brand">
+            <img src="./assents/static/img/Sena_Colombia_logo.svg.png" alt="">
+            <span><!--Bodega o nombre del proyecto--></span>
+        </div>
+        </div>
+        
+        <div class="menu-container">
+                <ul class="menu">
+                    <!--modulo de home-->
+                        <li class="menu-item menu-item-static">
+                            <a href="./Home.html" class="menu-link">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Home</span> 
+                            </a>
+                        </li>
+                        <!--modulo de bodega-->
+                        <li class="menu-item menu-item-dropdown active">
+                                <a href="#" class="menu-link">
+                                <i class="fa-solid fa-box-archive"></i>
+                                <span>Bodega</span> 
+                                </a>
+                                <!--sub-modulos de bodega-->
+                            <ul class="sub-menu">
+                                <li><a href="./Bodega-areas-bodegas.html" class="sub-menu-link">Gestión de areas y bodegas</a></li>
+                                <li><a href="./Bodega-materiales.html" class="sub-menu-link">Gestión de materiales</a></li>
+                            </ul>
+                        </li>
+                        <!--modulo de usuarios-->
+                    <li class="menu-item menu-item-dropdown">
+                                <a href="/usu.html" class="menu-link">
+                                <i class="fa-solid fa-user-group"></i>
+                                <span>Usuarios</span> 
+                                </a>
+                    </li>
+                    <!--modulo de reportes-->
+                    <li class="menu-item menu-item-static">
+                        <a href="./ReporteTIC.html" class="menu-link">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Reportes</span> 
+                        </a>
+                    </li>
+                    <!--Modulo de prestamos-->
+                    <li class="menu-item menu-item-static ">
+                        <a href="./prestamos/Prestamos.html" class="menu-link">
+                        <i class="fas fa-hand-holding-hand"></i>
+                        <span>Prestamos</span> 
+                        </a>
+                    </li>
+                </ul>
+        </div>
+            <hr>
+       <div class="footer">
+        <ul class="menu">
+            <li class="menu-item menu-item-static">
+                        <a href="./login/login.html" class="menu-link">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        <span>salir</span> 
+                        </a>
+                    </li>
+        </ul>
+       </div>
+    </div>
+    <main class="contenido">
+        <button class="btn-add" id="btnAddMaterial">
+        <i class="fa-solid fa-plus"></i> Añadir Material
+    </button>
+
+    <!--agregar nuevo material -->
+    <div class="modal" id="modalAddMaterial">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Añadir Nuevo Material</h2>
+            <form id="formAddMaterial">
+                <div class="form-group">
+                    <label for="materialName">Nombre del Material:</label>
+                    <input type="text" id="materialName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="materialCode">Código:</label>
+                    <input type="text" id="materialCode" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="materialStock">Stock:</label>
+                    <input type="number" id="materialStock" min="0" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="materialArea">Área:</label>
+                    <select id="materialArea" required>
+                        <option value="">Seleccione un área</option>
+                        <option value="PAE">PAE</option>
+                        <option value="TIC">TIC</option>
+                        <option value="Gastronomía">Gastronomía</option>
+                        <option value="Vias">Vias</option>
+                        <option value="Escuela del cafe">Escuela del café</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="materialBodega">Bodega:</label>
+                    <select id="materialBodega" required>
+                        <option value="">Seleccione una bodega</option>
+                        <option value="Bodega Principal">Bodega Principal</option>
+                        <option value="Bodega de Redes">Bodega de Redes</option>
+                        <option value="Bodega Cocina">Bodega Cocina</option>
+                        <option value="Bodega Construcción">Bodega Construcción</option>
+                        <option value="Bodega Cafetería">Bodega Cafetería</option>
+                        <option value="Bodega Taller">Bodega Taller</option>
+                        <option value="Bodega de Equipos">Bodega de Equipos</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn-submit">Guardar Material</button>
+            </form>
+        </div>
+    </div>
+        <div class="tabla">
+        <table class="materiales">
+            <thead>
+                <tr>
+                    <th>Material</th>
+                    <th>Stock</th>
+                    <th>Código</th>
+                    <th>Área</th>
+                    <th>Bodega</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tornillos 3/8"</td>
+                    <td>150</td>
+                    <td>MAT-001</td>
+                    <td>PAE</td>
+                    <td>Bodega Principal</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-pen"></i></a>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+                <tr class="n">
+                    <td>Cables Ethernet</td>
+                    <td>50</td>
+                    <td>MAT-002</td>
+                    <td>TIC</td>
+                    <td>Bodega de Redes</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-pen"></i></a>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sartenes profesionales</td>
+                    <td>12</td>
+                    <td>MAT-003</td>
+                    <td>Gastronomía</td>
+                    <td>Bodega Cocina</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-pen"></i></a>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+                <tr class="n">
+                    <td>Cemento gris</td>
+                    <td>30</td>
+                    <td>MAT-004</td>
+                    <td>Vias</td>
+                    <td>Bodega Construcción</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-pen"></i></a>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Molinos de café</td>
+                    <td>8</td>
+                    <td>MAT-005</td>
+                    <td>Escuela del café</td>
+                    <td>Bodega Cafetería</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-pen"></i></a>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+                <tr class="n">
+                    <td>Herramientas eléctricas</td>
+                    <td>25</td>
+                    <td>MAT-006</td>
+                    <td>PAE</td>
+                    <td>Bodega Taller</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-pen"></i></a>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Monitores 24"</td>
+                    <td>15</td>
+                    <td>MAT-007</td>
+                    <td>TIC</td>
+                    <td>Bodega de Equipos</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-pen"></i></a>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </main>
+
+    <script src="./assents/js/Home.js"></script>
+    <script src="./assents/js/anadir-material.js"></script>
+</body>
+</html>

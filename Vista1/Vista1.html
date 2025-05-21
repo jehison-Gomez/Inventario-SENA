@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel Principal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Vista.css" />
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="#"><img src="/img/user.png" alt="Usuario" /></a>
+            <div class="info">
+                <p class="nombre">Pepe Perez</p>
+                <p class="rol">Administrador</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <div class="header">
+            <div class="menu-btn" id="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="brand">
+                <img src="/img/Sena png.png" alt="Logo" />
+                <span><!-- Nombre del Proyecto --></span>
+            </div>
+        </div>
+
+        <div class="menu-container">
+            <ul class="menu">
+                <li class="menu-item menu-item-static active">
+                    <a href="#" class="menu-link">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li class="menu-item menu-item-dropdown">
+                    <a href="#" class="menu-link">
+                        <i class="fa-solid fa-box-archive"></i>
+                        <span>Bodega</span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="./Bodega-areas-bodegas.html" class="sub-menu-link">Gestión de áreas y bodegas</a></li>
+                        <li><a href="./Bodega-materiales.html" class="sub-menu-link">Gestión de materiales</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item menu-item-dropdown">
+                    <a href="#" class="menu-link">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span>Usuarios</span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="sub-menu-link">Gestión de Usuarios</a></li>
+                        <li><a href="#" class="sub-menu-link">Permisos y Roles</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item menu-item-static">
+                    <a href="#" class="menu-link">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Reportes</span>
+                    </a>
+                </li>
+
+                <li class="menu-item menu-item-static">
+                    <a href="/prestamos/Prestamos.html" class="menu-link">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Préstamos</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Botón de salida -->
+            <div class="logout-container">
+                <button class="logout-btn" onclick="cerrarSesion()">
+                    <i class="fa-solid fa-right-from-bracket"></i> Salir
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function cerrarSesion() {
+            // Puedes limpiar el almacenamiento si es necesario: localStorage.clear();
+            window.location.href = "/login/login.html"; // Asegúrate que esta ruta sea correcta
+        }
+    </script>
+    <script src="./Vista.js"></script>
+</body>
+</html>

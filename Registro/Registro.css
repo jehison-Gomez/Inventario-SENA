@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/Yamboro.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Aplica el desenfoque solo a la imagen */
+    z-index: -1; /* Asegura que la imagen de fondo esté detrás del contenido */
+}
+
+.form-registro {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(45deg, rgba(0, 128, 0, 0.8), rgba(34, 139, 34, 0.7)); /* Degradado verde */
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    padding: 30px 30px;
+    color: black;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.form-registro h1 {
+    text-align: center;
+    font-size: 22px;
+    padding-bottom: 20px;
+    color: #fff; /* Texto blanco */
+}
+
+.Controls {
+    width: 100%;
+    background: rgb(0, 54, 5);
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    border: 2px solid transparent;
+    transition: border 0.3s ease; /* Transición suave en el borde */
+}
+
+.Controls:focus {
+    outline: none;
+    border: 2px solid #f0e68c; /* Resalta el borde cuando está enfocado */
+}
+
+.form-registro p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.form-registro a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.form-registro .botons {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: wheat;
+    color: black;
+    border-radius: 90px;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form-registro .botons:hover {
+    background: #f0e68c; /* Un color más suave o dorado */
+    transform: scale(1.05); /* Efecto de escala al hacer hover */
+}
+
+.img {
+    height: 50px;
+    width: 70px;
+}

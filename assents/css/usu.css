@@ -1,0 +1,86 @@
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 1rem;
+} */
+
+.table-container {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+thead th {
+  background-color: #e1e4e8;
+  font-weight: bold;
+}
+
+tr.modulo td {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  text-align: left;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #007bff;
+  cursor: pointer;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#guardarCambios {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#guardarCambios:hover {
+  background-color: #79b486;
+}
+
+.mensaje-exito {
+  margin-top: 10px;
+  color: 79b486;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+
+  #guardarCambios {
+    width: 100%;
+  }
+}

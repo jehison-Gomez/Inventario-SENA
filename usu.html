@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Permisos</title>
+  <link rel="stylesheet" href="/assents/css/Home.css">
+  <link rel="stylesheet" href="/assents/css/usu.css" />
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href=""><img src="./assents/static/img/user.png" alt=""></a>
+            <div class="info">
+                <p class="nombre">Pepe Perez</p>
+                <p class="rol">Administrador</p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="sidebar" id="sidebar">
+        <div class="header">
+            <div class="menu-btn" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="brand">
+            <img src="./assents/static/img/Sena_Colombia_logo.svg.png" alt="">
+            <span><!--Bodega o nombre del proyecto--></span>
+        </div>
+        </div>
+        
+        <div class="menu-container">
+                <ul class="menu">
+                    <!--modulo de home-->
+                        <li class="menu-item menu-item-static ">
+                            <a href="/Home.html" class="menu-link">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Home</span> 
+                            </a>
+                        </li>
+                        <!--modulo de bodega-->
+                        <li class="menu-item menu-item-dropdown">
+                                <a href="#" class="menu-link">
+                                <i class="fa-solid fa-box-archive"></i>
+                                <span>Bodega</span> 
+                                </a>
+                                <!--sub-modulos de bodega-->
+                            <ul class="sub-menu">
+                                <li><a href="./Bodega-areas-bodegas.html" class="sub-menu-link">Gestion de areas y bodegas</a></li>
+                                <li><a href="./Bodega-materiales.html" class="sub-menu-link">Gestion de materiales</a></li>
+                            </ul>
+                        </li>
+                        <!--modulo de usuarios-->
+                    <li class="menu-item menu-item-dropdown active">
+                                <a href="/usu.html" class="menu-link">
+                                <i class="fa-solid fa-user-group"></i>
+                                <span>Usuarios</span> 
+                                </a>
+                    </li>
+                    <!--modulo de reportes-->
+                    <li class="menu-item menu-item-static ">
+                        <a href="./ReporteTIC.html" class="menu-link">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Reportes</span> 
+                        </a>
+                    </li>
+                    <!--Modulo de prestamos-->
+                    <li class="menu-item menu-item-static ">
+                        <a href="/prestamos/Prestamos.html" class="menu-link">
+                        <i class="fas fa-hand-holding-hand"></i>
+                        <span>Prestamos</span> 
+                        </a>
+                    </li>
+                </ul>
+        </div>
+            <hr>
+       <div class="footer">
+        <ul class="menu">
+            <li class="menu-item menu-item-static">
+                        <a href="./login/login.html" class="menu-link">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        <span>salir</span> 
+                        </a>
+                    </li>
+        </ul>
+       </div>
+    </div>
+    <main class="contenido">
+  <div class="table-container">
+    <table id="tablaPermisos">
+      <thead>
+        <tr>
+          <th>Módulo / Submódulo</th>
+          <th>Administrador</th>
+          <th>Instructor</th>
+          <th>Pasante</th>
+          <th>Vocero</th>
+          <th>Diego</th>
+        </tr>
+      </thead>
+      <tbody id="tablaCuerpo">
+      
+      </tbody>
+    </table>
+
+    <div class="button-container">
+      <button id="guardarCambios">Guardar Cambios</button>
+    </div>
+  </div>
+</main>
+  <script src="/assents/js/usu.js"></script>
+  <script src="/assents/js/Home.js"></script>
+</body>
+</html>

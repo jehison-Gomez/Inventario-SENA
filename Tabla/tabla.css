@@ -1,0 +1,44 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#btnSolicitar {
+  background-color: #28a745;
+}
+
+#btnAgregar {
+  background-color: #17a2b8;
+}
+
+.editar-btn {
+  background-color: #0996ce;
+  margin-left: 5px;
+}
+
+.eliminar-btn {
+  background-color: #dc3545;
+  margin-left: 5px;
+}
